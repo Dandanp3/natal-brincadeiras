@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases 💭</title>
+    <link rel="stylesheet" href="frases.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>💭 Frases Divertidas</h1>
+            <p class="subtitle">Reflexões do dia a dia</p>
+        </header>
+
+        <div class="carousel-container">
+            <div class="frases-box" id="frasesBox">
+                <!-- Página 1 -->
+                <div class="page active" data-page="1">
+                    <div class="frase-item">
+                        <p class="frase">Quando a gente decide fazer algo simples...</p>
+                        <p class="resposta">➡️ ...acaba percebendo que nada sai exatamente como o plano.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando acordo de manhã e vejo o céu cinza...</p>
+                        <p class="resposta">➡️ ...quero café antes de pensar em qualquer coisa.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se estou com fome e vejo comida na mesa...</p>
+                        <p class="resposta">➡️ ...o problema não é o que comer, é com quem dividir.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando olho o relógio várias vezes...</p>
+                        <p class="resposta">➡️ ...é porque estou esperando algo importante.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se a música começa e todo mundo canta junto...</p>
+                        <p class="resposta">➡️ ...é sinal de que a noite vai ser boa.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando o telefone toca repetidas vezes...</p>
+                        <p class="resposta">➡️ ...é melhor respirar fundo antes de atender.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se a chuva começa de repente...</p>
+                        <p class="resposta">➡️ ...é hora de achar um lugar seco pra continuar.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando o Wi-Fi cai bem no meio de algo importante...</p>
+                        <p class="resposta">➡️ ...é porque o universo estava testando minha paciência.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se recebo mensagem e fico um tempo sem responder...</p>
+                        <p class="resposta">➡️ ...é porque ainda não sei o que dizer.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando penso no dia que tive...</p>
+                        <p class="resposta">➡️ ...dá vontade de planejar outro melhor amanhã.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando a gente acha que vai ser rápido...</p>
+                        <p class="resposta">➡️ ...sempre leva mais tempo do que o esperado.</p>
+                    </div>
+                </div>
+
+                <!-- Página 2 -->
+                <div class="page" data-page="2">
+                    <div class="frase-item">
+                        <p class="frase">Se eu digo "já estou chegando"...</p>
+                        <p class="resposta">➡️ ...é porque ainda falta um pouco.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando sento só um minuto...</p>
+                        <p class="resposta">➡️ ...acabo ficando bem mais tempo.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se deixo pra depois...</p>
+                        <p class="resposta">➡️ ...geralmente vira nunca.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando o dia começa meio estranho...</p>
+                        <p class="resposta">➡️ ...raramente termina do jeito que eu imaginei.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se todo mundo fica em silêncio de repente...</p>
+                        <p class="resposta">➡️ ...alguma coisa foi dita sem palavras.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando olho o celular sem notificação...</p>
+                        <p class="resposta">➡️ ...é porque eu esperava alguma mensagem.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se a conversa para do nada...</p>
+                        <p class="resposta">➡️ ...alguém ficou pensando no que não falou.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Quando a fome aparece fora de hora...</p>
+                        <p class="resposta">➡️ ...qualquer coisa parece boa.</p>
+                    </div>
+                    
+                    <div class="frase-item">
+                        <p class="frase">Se o plano muda no último momento...</p>
+                        <p class="resposta">➡️ ...é melhor fingir que já era o plano original.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prevBtn" class="btn-nav" disabled>⬅️ Anterior</button>
+                <span class="page-indicator" id="pageIndicator">Página 1 de 2</span>
+                <button id="nextBtn" class="btn-nav">Próxima ➡️</button>
+            </div>
+
+            <a href="index.html" class="btn-back">
+                🏠 Voltar ao Menu
+            </a>
+        </div>
+    </div>
+
+    <script src="frases.js"></script>
+    
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄️';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.querySelector('.snow-container').appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+        
+        setInterval(createSnowflake, 300);
+    </script>
+</body>
+</html>

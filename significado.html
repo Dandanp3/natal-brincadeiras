@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Significado do Amigo Secreto ❤️</title>
+    <link rel="stylesheet" href="significado.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>❤️ Significado do Amigo Secreto</h1>
+        </header>
+
+        <div class="content-container">
+            <div class="text-box">
+                <p class="paragraph">
+                    Toda essa dinâmica do amigo secreto tem um significado muito especial. Muitas vezes ouvimos frases como "eu não sei", "eu não consigo". E essa dinâmica existe justamente para mostrar que, com vontade e dedicação, todos nós somos capazes de realizar qualquer coisa. O mais importante é não desistir.
+                </p>
+                
+                <p class="paragraph">
+                    Por isso, todos nós aqui hoje estamos de parabéns, porque nos dedicamos e conseguimos, mesmo sem experiência. Cada esforço valeu a pena.
+                </p>
+                
+                <p class="paragraph">
+                    A Bíblia nos orienta a "dar graças em todas as circunstâncias, pois esta é a vontade de Deus para vocês em Cristo Jesus". Isso vale tanto para os momentos difíceis quanto para as conquistas.
+                </p>
+                
+                <p class="paragraph highlight">
+                    E que cada vitória não nos leve ao orgulho, mas à humildade, reconhecendo que é o poder de Deus que nos sustenta e nos capacita a vencer.
+                </p>
+            </div>
+
+            <a href="index.html" class="btn-back">
+                ⬅️ Voltar ao Menu
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄️';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.querySelector('.snow-container').appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+        
+        setInterval(createSnowflake, 300);
+    </script>
+</body>
+</html>
