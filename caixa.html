@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 Brincadeira da Caixa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="caixa.css">
+</head>
+<body>
+    <div class="snow-container">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎁 Brincadeira da Caixa 🎁</h1>
+            <p class="subtitle">Controle a música da caixa surpresa! 🎵</p>
+        </header>
+
+        <main class="game-container">
+            <div class="game-card">
+                <div class="box-icon" id="boxIcon">🎁</div>
+
+                <div class="controls">
+                    <button class="btn btn-play" id="playBtn">
+                        ▶️ PLAY
+                    </button>
+                    <button class="btn btn-stop" id="stopBtn" disabled>
+                        ⏹️ STOP
+                    </button>
+                </div>
+
+                <div class="status-message" id="statusMessage">
+                    Aperte PLAY para começar a música! 🎵
+                </div>
+
+                <a href="index.html" class="btn btn-back">
+                    ⬅️ Voltar ao Menu
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>🎄 Divirta-se! 🎄</p>
+        </footer>
+    </div>
+
+    <!-- Audio Element (substitua o src pelo seu arquivo MP3) -->
+    <audio id="musicPlayer" preload="auto">
+        <source src="musica-caixa.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script src="caixa.js"></script>
+</body>
+</html>

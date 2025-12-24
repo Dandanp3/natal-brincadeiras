@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎡 Brincadeira da Roda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="roda.css">
+</head>
+<body>
+    <div class="snow-container">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎡 Brincadeira da Roda 🎡</h1>
+            <p class="subtitle">Aperte PLAY e deixe a sorte decidir! 🎲</p>
+        </header>
+
+        <main class="game-container">
+            <div class="game-card">
+                <div class="timer-display" id="timerDisplay">
+                    <span class="timer-text">Pronto para começar! 🎅</span>
+                </div>
+
+                <div class="wheel-icon" id="wheelIcon">🎡</div>
+
+                <button class="btn btn-play" id="playBtn">
+                    <span id="btnText">▶️ PLAY</span>
+                </button>
+
+                <div class="status-message" id="statusMessage">
+                    A música tocará por 10-15 segundos aleatórios!
+                </div>
+
+                <a href="index.html" class="btn btn-back">
+                    ⬅️ Voltar ao Menu
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>🎄 Boa sorte! 🎄</p>
+        </footer>
+    </div>
+
+    <!-- Audio Element (substitua o src pelo seu arquivo MP3) -->
+    <audio id="musicPlayer" preload="auto">
+        <source src="./Audio/YMCA.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script src="roda.js"></script>
+</body>
+</html>
