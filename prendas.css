@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -50px;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.roulette-display {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-bottom: 25px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.prenda-text {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.roulette-display.spinning .prenda-text {
+  animation: spin-text 0.1s linear infinite;
+}
+
+@keyframes spin-text {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.current-prenda {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.btn-spin {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(56, 239, 125, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-spin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 239, 125, 0.6);
+}
+
+.btn-spin:active {
+  transform: translateY(0);
+}
+
+.btn-spin:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.counter {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.counter span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #38ef7d;
+}
+
+.btn-reset {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-reset:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.btn-back {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-container {
+    padding: 30px 20px;
+  }
+
+  .roulette-display {
+    min-height: 120px;
+    padding: 20px 15px;
+  }
+
+  .prenda-text {
+    font-size: 1.1rem;
+  }
+
+  .current-prenda {
+    font-size: 1rem;
+    padding: 15px;
+    min-height: 60px;
+  }
+
+  .btn-spin {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+  }
+
+  .counter {
+    font-size: 1rem;
+  }
+
+  .counter span {
+    font-size: 1.3rem;
+  }
+}

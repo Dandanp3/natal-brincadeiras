@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta de Prendas 🎭</title>
+    <link rel="stylesheet" href="prendas.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>🎭 Roleta de Prendas</h1>
+            <p class="subtitle">Gire a roleta e descubra o desafio!</p>
+        </header>
+
+        <div class="game-container">
+            <div class="roulette-display" id="rouletteDisplay">
+                <div class="prenda-text">Pronto para girar!</div>
+            </div>
+
+            <div class="current-prenda" id="currentPrenda">
+                Aperte o botão para começar
+            </div>
+            
+            <div class="controls">
+                <button id="spinBtn" class="btn-spin">
+                    🎲 Roletar Prenda
+                </button>
+            </div>
+
+            <div class="counter">
+                <span id="prendasRestantes">11</span> prendas restantes
+            </div>
+
+            <button id="resetBtn" class="btn-reset">
+                🔄 Reiniciar Prendas
+            </button>
+
+            <a href="index.html" class="btn-back">
+                ⬅️ Voltar ao Menu
+            </a>
+        </div>
+    </div>
+
+    <script src="prendas.js"></script>
+    
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄️';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.querySelector('.snow-container').appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+        
+        setInterval(createSnowflake, 300);
+    </script>
+</body>
+</html>
